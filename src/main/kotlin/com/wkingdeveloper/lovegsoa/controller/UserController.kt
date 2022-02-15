@@ -18,5 +18,11 @@ class UserController(
         userService.save()
         return "save"
     }
+    @GetMapping("/user/find")
+    @ResponseBody
+    fun userFind(): String {
+        userService.find()
+        return "find"
+    }
 
 }
